@@ -27,7 +27,7 @@ npx playwright install --with-deps chromium
 import type { ScreenshotConfig } from "./screenshots.types";
 
 const config: ScreenshotConfig = {
-  themeIds: ["vikpe.synthwave-alpha"],
+  themeIds: ["vikpe.synthwave-alpha", "Yummygum.city-lights-theme"],
 
   // filenames opened by default in overview screenshot
   overviewFilenames: ["hello.ts", "readme.md"],

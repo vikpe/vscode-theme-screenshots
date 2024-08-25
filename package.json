@@ -1,0 +1,15 @@
+{
+  "name": "vscode-theme-screenshots",
+  "version": "0.1.0",
+  "description": "Automate screenshots of Visual Studio Code themes.",
+  "author": "Viktor Persson",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/vikpe/vscode-theme-screenshots.git",
+    "type": "git"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.46.1",
+    "@types/node": "^22.5.0"
+  }
+}

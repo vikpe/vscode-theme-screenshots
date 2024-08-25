@@ -48,16 +48,12 @@ export default config;
 
 ### Output
 
-<img src="./.github/sample_output/vikpe.synthwave-alpha/app.png" align="left" width="48%" /><img src="./.github/sample_output/Yummygum.city-lights-theme/app.png" align="right" width="48%" />
-&nbsp;
+<img src="./.github/sample_output/vikpe.synthwave-alpha/app.png" width="45%" /><img src="./.github/sample_output/Yummygum.city-lights-theme/app.png" width="45%" />
 
-<img src="./.github/sample_output/vikpe.synthwave-alpha/index.html.png" align="left" width="48%" /><img src="./.github/sample_output/Yummygum.city-lights-theme/index.html.png" align="right" width="48%" />
-&nbsp;
+<img src="./.github/sample_output/vikpe.synthwave-alpha/index.html.png" width="45%" /><img src="./.github/sample_output/Yummygum.city-lights-theme/index.html.png" width="45%" />
 
-<img src="./.github/sample_output/vikpe.synthwave-alpha/main.py.png" align="left" width="48%" /><img src="./.github/sample_output/Yummygum.city-lights-theme/main.py.png" align="right" width="48%" />
-&nbsp;
+<img src="./.github/sample_output/vikpe.synthwave-alpha/main.py.png" width="45%" /><img src="./.github/sample_output/Yummygum.city-lights-theme/main.py.png" width="45%" />
 
-<img src="./.github/sample_output/vikpe.synthwave-alpha/readme.md.png" align="left" width="48%" /><img src="./.github/sample_output/Yummygum.city-lights-theme/readme.md.png" align="right" width="48%" />
-&nbsp;
+<img src="./.github/sample_output/vikpe.synthwave-alpha/readme.md.png" width="45%" /><img src="./.github/sample_output/Yummygum.city-lights-theme/readme.md.png" width="45%" />
 
-<img src="./.github/sample_output/vikpe.synthwave-alpha/run.sh.png" align="left" width="48%" /><img src="./.github/sample_output/Yummygum.city-lights-theme/run.sh.png" align="right" width="48%" />
+<img src="./.github/sample_output/vikpe.synthwave-alpha/run.sh.png" width="45%" /><img src="./.github/sample_output/Yummygum.city-lights-theme/run.sh.png" width="45%" />

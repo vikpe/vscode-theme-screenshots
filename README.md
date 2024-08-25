@@ -36,7 +36,6 @@ const config: ScreenshotConfig = {
   // vscode theme playground files
   // see example at: https://vscode.dev/editor/theme/vikpe.synthwave-alpha
   editorFilenames: [
-    "example.java",
     "index.html",
     "main.py",
     "readme.md",f

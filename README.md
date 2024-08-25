@@ -48,17 +48,16 @@ export default config;
 
 ### Output
 
-<img src="./.github/sample_output/vikpe.synthwave-alpha/app.png" align="left" width="48%" />
-<img src="./.github/sample_output/Yummygum.city-lights-theme/app.png" align="right" width="48%" />
+<img src="./.github/sample_output/vikpe.synthwave-alpha/app.png" align="left" width="48%" /><img src="./.github/sample_output/Yummygum.city-lights-theme/app.png" align="right" width="48%" />
+&nbsp;
 
-<img src="./.github/sample_output/vikpe.synthwave-alpha/index.html.png" align="left" width="48%" />
-<img src="./.github/sample_output/Yummygum.city-lights-theme/index.html.png" align="right" width="48%" />
+<img src="./.github/sample_output/vikpe.synthwave-alpha/index.html.png" align="left" width="48%" /><img src="./.github/sample_output/Yummygum.city-lights-theme/index.html.png" align="right" width="48%" />
+&nbsp;
 
-<img src="./.github/sample_output/vikpe.synthwave-alpha/main.py.png" align="left" width="48%" />
-<img src="./.github/sample_output/Yummygum.city-lights-theme/main.py.png" align="right" width="48%" />
+<img src="./.github/sample_output/vikpe.synthwave-alpha/main.py.png" align="left" width="48%" /><img src="./.github/sample_output/Yummygum.city-lights-theme/main.py.png" align="right" width="48%" />
+&nbsp;
 
-<img src="./.github/sample_output/vikpe.synthwave-alpha/readme.md.png" align="left" width="48%" />
-<img src="./.github/sample_output/Yummygum.city-lights-theme/readme.md.png" align="right" width="48%" />
+<img src="./.github/sample_output/vikpe.synthwave-alpha/readme.md.png" align="left" width="48%" /><img src="./.github/sample_output/Yummygum.city-lights-theme/readme.md.png" align="right" width="48%" />
+&nbsp;
 
-<img src="./.github/sample_output/vikpe.synthwave-alpha/run.sh.png" align="left" width="48%" />
-<img src="./.github/sample_output/Yummygum.city-lights-theme/run.sh.png" align="right" width="48%" />
+<img src="./.github/sample_output/vikpe.synthwave-alpha/run.sh.png" align="left" width="48%" /><img src="./.github/sample_output/Yummygum.city-lights-theme/run.sh.png" align="right" width="48%" />

@@ -30,7 +30,7 @@ const config: ScreenshotConfig = {
   themeIds: ["vikpe.synthwave-alpha"],
 
   // filenames opened by default in overview screenshot
-  appOverviewFilenames: ["hello.ts", "readme.md"],
+  overviewFilenames: ["hello.ts", "readme.md"],
 
   // files for individual editor screenshots
   // vscode theme playground files
@@ -48,12 +48,17 @@ export default config;
 
 ### Output
 
-![](./.github/sample_output/vikpe.synthwave-alpha/app.png)
+<img src="./.github/sample_output/vikpe.synthwave-alpha/app.png" align="left" width="48%" />
+<img src="./.github/sample_output/Yummygum.city-lights-theme/app.png" align="right" width="48%" />
 
-![](./.github/sample_output/vikpe.synthwave-alpha/index.html.png)
+<img src="./.github/sample_output/vikpe.synthwave-alpha/index.html.png" align="left" width="48%" />
+<img src="./.github/sample_output/Yummygum.city-lights-theme/index.html.png" align="right" width="48%" />
 
-![](./.github/sample_output/vikpe.synthwave-alpha/main.py.png)
+<img src="./.github/sample_output/vikpe.synthwave-alpha/main.py.png" align="left" width="48%" />
+<img src="./.github/sample_output/Yummygum.city-lights-theme/main.py.png" align="right" width="48%" />
 
-![](./.github/sample_output/vikpe.synthwave-alpha/readme.md.png)
+<img src="./.github/sample_output/vikpe.synthwave-alpha/readme.md.png" align="left" width="48%" />
+<img src="./.github/sample_output/Yummygum.city-lights-theme/readme.md.png" align="right" width="48%" />
 
-![](./.github/sample_output/vikpe.synthwave-alpha/run.sh.png)
+<img src="./.github/sample_output/vikpe.synthwave-alpha/run.sh.png" align="left" width="48%" />
+<img src="./.github/sample_output/Yummygum.city-lights-theme/run.sh.png" align="right" width="48%" />

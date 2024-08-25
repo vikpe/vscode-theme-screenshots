@@ -1,5 +1,5 @@
 export type ScreenshotConfig = {
 	themeIds: string[];
-	appOverviewFilenames: string[];
+	overviewFilenames: string[];
 	editorFilenames: string[];
 };

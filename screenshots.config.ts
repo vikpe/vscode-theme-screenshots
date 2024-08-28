@@ -1,24 +1,13 @@
 import type { ScreenshotConfig } from "./screenshots.types";
 
 const config: ScreenshotConfig = {
-	// ids of themes to screenshot
 	themeIds: ["vikpe.synthwave-alpha", "Yummygum.city-lights-theme"],
+	codeSamplesDir: "code_samples",
+	outputDir: "dist",
 
-	// filenames opened by default in overview screenshot
-	overviewFilenames: ["hello.ts", "readme.md"],
-
-	// files for editor screenshots per language (vscode theme playground files)
-	// view available files at: https://vscode.dev/editor/theme/vikpe.synthwave-alpha
-	editorFilenames: [
-		"example.java",
-		"hello.ts",
-		"index.html",
-		"main.py",
-		"package.json",
-		"readme.md",
-		"rectangle.cpp",
-		"run.sh",
-	],
+	// remote files opened in the application overview screenshot (app.png)
+	// see https://vscode.dev/editor/theme/vikpe.synthwave-alpha for examples
+	defaultRemoteFiles: ["package.json", "readme.md"],
 };
 
 export default config;

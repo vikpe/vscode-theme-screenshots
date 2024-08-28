@@ -1,62 +1,37 @@
-import { type Locator, type Page, expect, test } from "@playwright/test";
+import { test } from "@playwright/test";
+import { readdirSync } from "node:fs";
+import path from "node:path";
+import { Controller } from "./helpers";
 import config from "./screenshots.config";
 
-const quickInputSelector = 'input[aria-describedby="quickInput_message"]';
-
-async function runCommand(page: Page, command: string) {
-	await page.keyboard.press("Control+Shift+P");
-	await page.fill(quickInputSelector, command);
-	await page.locator(quickInputSelector).press("Enter");
-	await expect(page.locator(quickInputSelector)).toBeHidden();
-}
-
-async function openFile(page: Page, filename: string) {
-	await runCommand(page, `/${filename}`);
-	await page
-		.locator(".breadcrumbs")
-		.locator(`a.label-name :has-text("${filename}")`)
-		.isVisible();
-}
-
-async function saveScreenshot(
-	locator: Locator,
-	themeId: string,
-	filename: string,
-) {
-	await locator.screenshot({
-		animations: "disabled",
-		path: `./dist/${themeId}/${filename}.png`,
-	});
-}
+const inputFiles = readdirSync(config.codeSamplesDir);
 
 for (const themeId of config.themeIds) {
-	test(`save screenshots for ${themeId}`, async ({ page }) => {
-		// load theme
-		await page.goto(`https://vscode.dev/editor/theme/${themeId}`);
-		await expect(page.locator(".notification-list-item").getByRole('button', { name: 'Install' })).toBeVisible({timeout: 12000});
+	const themeOutputDir = path.join(config.outputDir, themeId);
+	const dstPath = (name: string) => path.join(themeOutputDir, name);
 
-		// reset ui
-		await runCommand(page, "> notifications.toggleDoNotDisturbMode");
-		await runCommand(page, "> action.toggleMinimap");
-		await runCommand(page, "> action.editorLayoutSingle");
-		await runCommand(page, "> action.closeAllEditors");
+	test(`${themeId}`, async ({ page }) => {
+		const ctrl = new Controller(page);
 
-		// overview screenshot
-		const app = page.locator(".monaco-split-view2.horizontal").first();
+		await test.step("load editor", async () => {
+			await ctrl.loadEditor(themeId);
+		});
 
-		for (const filename of config.overviewFilenames) {
-			await openFile(page, filename);
-		}
-
-		await saveScreenshot(app, themeId, "app");
+		await test.step("app.png", async () => {
+			for (const filename of config.defaultRemoteFiles) {
+				await ctrl.loadRemoteFile(filename);
+			}
+			await ctrl.saveApplicationScreenshot(dstPath("app.png"));
+		});
 
 		// code sample screenshots
-		const editor = app.locator(".editor-group-container.active").first();
+		for (const filename of inputFiles) {
+			const srcPath = path.join(config.codeSamplesDir, filename);
 
-		for (const filename of config.editorFilenames) {
-			await runCommand(page, "> action.closeAllEditors");
-			await openFile(page, filename);
-			await saveScreenshot(editor, themeId, filename);
+			await test.step(srcPath, async () => {
+				await ctrl.loadLocalFile(srcPath);
+				await ctrl.saveEditorScreenshot(dstPath(`${filename}.png`));
+			});
 		}
 	});
 }

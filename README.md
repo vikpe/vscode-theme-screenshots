@@ -2,7 +2,7 @@
 
 > Automate screenshots of Visual Studio Code themes
 
-Use [Playwright](https://playwright.dev/) and [vscode.dev](https://vscode.dev/) to generate screenshots of Visual Studio Code themes.
+**TLDR**; Use [Playwright](https://playwright.dev/) and [vscode.dev](https://vscode.dev/) to generate screenshots of Visual Studio Code themes.
 
 ## Setup
 
@@ -16,8 +16,9 @@ npx playwright install --with-deps chromium
 ## Usage
 
 1. Edit `screenshots.config.ts`
-2. Run `npx playwright test screenshots.spec`
-3. Screenshots saved to `/dist/{themeId}/`.
+2. Put code samples in `/code_samples`
+3. Run `npx playwright test screenshots.spec`
+4. Screenshots saved to `/dist/{themeId}/`
 
 ## Example
 
@@ -28,32 +29,36 @@ import type { ScreenshotConfig } from "./screenshots.types";
 
 const config: ScreenshotConfig = {
   themeIds: ["vikpe.synthwave-alpha", "Yummygum.city-lights-theme"],
+  codeSamplesDir: "code_samples",
+  outputDir: "dist",
 
-  // filenames opened by default in overview screenshot
-  overviewFilenames: ["hello.ts", "readme.md"],
-
-  // files for individual editor screenshots
-  // vscode theme playground files
-  // see example at: https://vscode.dev/editor/theme/vikpe.synthwave-alpha
-  editorFilenames: [
-    "index.html",
-    "main.py",
-    "readme.md",f
-    "run.sh",
-  ],
+  // remote files opened in the application overview screenshot (app.png)
+  // see https://vscode.dev/editor/theme/vikpe.synthwave-alpha for examples
+  defaultRemoteFiles: ["package.json", "readme.md"],
 };
 
 export default config;
+```
+
+### Run
+
+```sh
+> npx playwright test screenshots.spec
+
+Running 2 tests using 2 workers
+
+  ✓  1 [chromium] › screenshots.spec.ts:13:6 › Yummygum.city-lights-theme (9.8s)
+  ✓  2 [chromium] › screenshots.spec.ts:13:6 › vikpe.synthwave-alpha (9.7s)
+
+  2 passed (10.1s)
 ```
 
 ### Output
 
 <img src="./.github/sample_output/vikpe.synthwave-alpha/app.png" width="45%" /><img src="./.github/sample_output/Yummygum.city-lights-theme/app.png" width="45%" />
 
-<img src="./.github/sample_output/vikpe.synthwave-alpha/index.html.png" width="45%" /><img src="./.github/sample_output/Yummygum.city-lights-theme/index.html.png" width="45%" />
+<img src="./.github/sample_output/vikpe.synthwave-alpha/markdown.md.png" width="45%" /><img src="./.github/sample_output/Yummygum.city-lights-theme/markdown.md.png" width="45%" />
 
-<img src="./.github/sample_output/vikpe.synthwave-alpha/main.py.png" width="45%" /><img src="./.github/sample_output/Yummygum.city-lights-theme/main.py.png" width="45%" />
+<img src="./.github/sample_output/vikpe.synthwave-alpha/html.html.png" width="45%" /><img src="./.github/sample_output/Yummygum.city-lights-theme/html.html.png" width="45%" />
 
-<img src="./.github/sample_output/vikpe.synthwave-alpha/readme.md.png" width="45%" /><img src="./.github/sample_output/Yummygum.city-lights-theme/readme.md.png" width="45%" />
-
-<img src="./.github/sample_output/vikpe.synthwave-alpha/run.sh.png" width="45%" /><img src="./.github/sample_output/Yummygum.city-lights-theme/run.sh.png" width="45%" />
+<img src="./.github/sample_output/vikpe.synthwave-alpha/php.php.png" width="45%" /><img src="./.github/sample_output/Yummygum.city-lights-theme/php.php.png" width="45%" />

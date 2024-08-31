@@ -1,25 +1,24 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Hello</title>
-    <link
-      href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css"
-      rel="stylesheet"
-    />
-
-    <style type="text/css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample HTML</title>
+    <style>
       body {
-        color: purple;
-        background-color: #d8da3d;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: black;
       }
     </style>
   </head>
   <body>
+    <h1>Hello, World!</h1>
+    <p>This is a sample HTML file.</p>
     <script>
-      window.alert("Hello World");
+      document.addEventListener("DOMContentLoaded", () => {
+        console.log("Document loaded");
+      });
     </script>
-    <div class="flash-banner hidden">
-      <span class="codicon"></span>
-    </div>
   </body>
 </html>

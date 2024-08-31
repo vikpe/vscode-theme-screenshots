@@ -1,0 +1,61 @@
+// Variables
+$primary-color: black;
+$secondary-color: #fff;
+$highlight-color: hsl(16, 100%, 54%);
+$max-width: 1200px;
+$padding: 20px;
+
+// Mixin for flexbox
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Base styles
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    background-image: url(http://example.com/bg.jpg);
+    color: $primary-color;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: $padding;
+
+    p {
+        margin-bottom: 15px;
+    }
+}
+
+#main-header {
+    background-color: $primary-color;
+    color: $secondary-color;
+    padding: 10px 0;
+    text-align: center;
+
+    @include flex-center;
+}
+
+a:hover {
+    color: $highlight-color;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    #main-header {
+        font-size: 1.2em;
+    }
+}

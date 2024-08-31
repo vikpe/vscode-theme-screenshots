@@ -1,0 +1,23 @@
+[package]
+name = "vscode-theme-screenshots"
+description = "Automate screenshots of Visual Studio Code themes."
+keywords = ["vscode", "theme", "screenshots"]
+repository = "https://github.com/vikpe/vscode-theme-screenshots"
+authors = ["Viktor Persson"]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+include = ["/LICENSE", "/README.md"]
+
+[dependencies]
+anyhow = "1.0.86"
+tinyudp = "0.4.0"
+serde = { version = "1.0.204", optional = true, features = ["derive"] }
+serde_json = { version = "1.0.120", optional = true }
+
+[dev-dependencies]
+pretty_assertions = "1.4.0"
+
+[features]
+default = []
+json = ["dep:serde", "dep:serde_json"]

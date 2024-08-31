@@ -1,36 +1,26 @@
 <?php
-class HelloWorldTest extends PHPUnit_Framework_TestCase
-{
-    /**
-     * @var PDO
-     */
-    private $pdo;
-    public function setUp()
-    {
-        $this->pdo = new PDO($GLOBALS['db_dsn'], $GLOBALS['db_username'], $GLOBALS['db_password']);
-        $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $this->pdo->query("CREATE TABLE hello (what VARCHAR(50) NOT NULL)");
+
+function greet(string $name): void {
+    $greeting = "Hello, $name!";
+    echo $greeting . PHP_EOL;
+}
+
+class Person {
+    private string $name;
+    private int $age;
+
+    public function __construct(string $name, int $age) {
+        $this->name = $name;
+        $this->age = $age;
     }
-    public function tearDown()
-    {
-        $this->pdo->query("DROP TABLE hello");
-    }
-    public function testHelloWorld()
-    {
-        $helloWorld = new HelloWorld($this->pdo);
-        $this->assertEquals('Hello World', $helloWorld->hello());
-    }
-    public function testHello()  
-    {
-        $helloWorld = new HelloWorld($this->pdo);
-        $this->assertEquals('Hello Bar', $helloWorld->hello('Bar'));
-    }
-    public function testWhat()
-    {
-        $helloWorld = new HelloWorld($this->pdo);
-        $this->assertFalse($helloWorld->what());
-        $helloWorld->hello('Bar');
-        $this->assertEquals('Bar', $helloWorld->what());
+
+    public function introduce(): void {
+        echo "Hi, I'm {$this->name} and I'm {$this->age} years old." . PHP_EOL;
     }
 }
+
+$john = new Person("John", 30);
+$john->introduce();
+greet("World");
+
 ?>

@@ -13,12 +13,18 @@ npm install
 npx playwright install --with-deps chromium
 ```
 
-## Usage
+## Configuration
 
 1. Edit `screenshots.config.ts`
 2. Put code samples in `/code_samples`
-3. Run `npx playwright test screenshots.spec`
-4. Screenshots saved to `/dist/{themeId}/`
+
+## Usage
+
+```sh
+npx playwright test screenshots.spec
+```
+
+Screenshots are saved to `/dist/{themeId}/`
 
 ## Example
 
